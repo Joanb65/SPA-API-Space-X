@@ -5,12 +5,12 @@ const Home =  async () => {
     const characters = await getData();
 
     const view =  `
-        <div class="Characters">
-        ${characters.results.map(character => `
-        <article class="Character-item">
-            <a href="#/${character.id}/">
-            <img src="${character.image}" alt="${character.name}">
-            <h2>${character.name}</h2>
+        <div class="Rockets">
+        ${launches.map(launch => `
+        <article class="Rockets-item">
+            <a href="#/${launch.id}/">
+            <img src="${launch.link.patch.small}" alt="">
+            <h2>${launch.name}</h2>
             </a>
         </article>
                 `).join('') }

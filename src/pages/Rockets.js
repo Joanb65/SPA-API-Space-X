@@ -1,18 +1,21 @@
 import getHash from '../utils/getHash';
 import getData from '../utils/getData';
 
-const Character =  async () => {
+const Rockets =  async () => {
 
-    const id = getHash();
-    const character = await getData(id);
+    const launches = await getData();
+    const launch_number = await getHash();
+    console.log(launch_number)
+    const launch = launches.find(launch => launch.id === launch_number);
+    console.log(launch)
     const view = `
-        <div class="Characters-inner">
-            <article class="Character-card">
-                <img src="${character.image}" alt="${character.name}">
+        <div class="Rockets-inner">
+            <article class="Rockets-card">
+                <img src="${launch.links.patch.small}">
                 <h2>${character.name}</h2>
             </article>
 
-            <article class="Characters-card">
+            <article class="Rockets-card">
                 <h3>Episodes: <span>${character.episode.length}</span></h3>
                 <h3>Status:<span>${character.status}</span></ </h3>
                 <h3>Species: <span>${character.species}</span></</h3>
@@ -24,4 +27,4 @@ const Character =  async () => {
     `
     return view
 };
-export default Character;
+export default Rockets;
