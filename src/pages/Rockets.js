@@ -7,10 +7,6 @@ const Rockets = async () => {
     
     const launch = launches.find(launch => launch.id === launch_id);
 
-    if (!launch) {
-        return `<div class="Rockets-inner">Despegue no encontrado</div>`;
-    }
-
     const view = `
         <div class="Rockets-inner">
             <article class="Rockets-card">
