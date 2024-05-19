@@ -1,22 +1,21 @@
 import getData from '../utils/getData';
 
-const Home =  async () => {
+const Home = async () => {
+    const launches = await getData();
 
-    const characters = await getData();
-
-    const view =  `
+    const view = `
         <div class="Rockets">
         ${launches.map(launch => `
         <article class="Rockets-item">
             <a href="#/${launch.id}/">
-            <img src="${launch.link.patch.small}" alt="">
+            <img src="${launch.links.patch.small}" alt="${launch.name}">
             <h2>${launch.name}</h2>
             </a>
         </article>
-                `).join('') }
-        </div  
-            `
+        `).join('')}
+        </div>
+    `;
     return view;
-}
+};
 
 export default Home;

@@ -8,7 +8,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.Header-main {
+.Rockets-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,21 +26,21 @@ body {
   justify-content: center;
 }
 
-.Characters {
+.Rockets {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
 }
 
-.Characters-inner {
+.Rockets-inner {
   grid-template-columns: 1fr 2fr;
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
 }
 
-.Characters-card {
+.Rockets-card {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
@@ -50,26 +50,26 @@ body {
   animation-name: fade;
 }
 
-.Characters-card img {
+.Rockets-card img {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
 }
 
-.Characters-card h2 {
+.Rockets-card h2 {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
 }
 
-.Characters-card h3 {
+.Rockets-card h3 {
   font-size: 18px;
   font-weight: 400;
   text-align: left;
   margin: 20px;
 }
 
-.Characters-item {
+.Rockets-item {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
@@ -79,13 +79,13 @@ body {
   animation-name: fade;
 }
 
-.Characters-item img {
+.Rockets-item img {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
 }
 
-.Characters-item h2 {
+.Rockets-item h2 {
   font-size: 18px;
   font-weight: 300;
   padding: 5px 10px;
@@ -93,7 +93,7 @@ body {
   justify-content: space-between;
 }
 
-.Characters-item a {
+.Rockets-item a {
   text-decoration: none;
   color: #026C86;
 }
