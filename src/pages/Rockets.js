@@ -8,7 +8,7 @@ const Rockets = async () => {
     const launch = launches.find(launch => launch.id === launch_id);
 
     if (!launch) {
-        return `<div class="Rockets-inner">Launch not found</div>`;
+        return `<div class="Rockets-inner">Despegue no encontrado</div>`;
     }
 
     const view = `
@@ -19,12 +19,12 @@ const Rockets = async () => {
             </article>
 
             <article class="Rockets-card">
-                <h3>Flight Number: <span>${launch.flight_number}</span></h3>
-                <h3>Launch Date: <span>${new Date(launch.date_utc).toLocaleString()}</span></h3>
-                <h3>Details: <span>${launch.details || 'No details available'}</span></h3>
-                <h3>Failures: <span>${launch.failures.length > 0 ? (
+                <h3>Numero de vuelo: <span>${launch.flight_number}</span></h3>
+                <h3>Fecha de lanzamiento: <span>${new Date(launch.date_utc).toLocaleString()}</span></h3>
+                <h3>Detalles: <span>${launch.details || 'Sin detalles disponibles'}</span></h3>
+                <h3>Fallas: <span>${launch.failures.length > 0 ? (
                     launch.failures.map(failure => `${failure.reason}`).join(', ')
-                ) : 'No failures'}</span></h3>
+                ) : 'Sin fallas'}</span></h3>
             </article>
         </div> 
     `;
