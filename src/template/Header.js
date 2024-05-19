@@ -4,14 +4,11 @@ const Header = () => {
          <div class="Header-logo">
             <h1>
                 <a href="/">
-                    Space x
+                    Lanzamientos de SpaceX
                 </a> 
             </h1>
          </div>
             <div class="Header-nav">
-                <a href="#/about/">
-                    About
-                </a>
        </div>
     `;
     return view;
